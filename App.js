@@ -44,7 +44,7 @@ export default class App extends Component {
             <ScrollView>
                 {
                     Object.keys(this.state.cryptos).map( (elem, i)=> (
-                        <Currency key={i} crypto={elem} />
+                        <Currency key={i} crypto={this.state.cryptos[elem]} />
                     ))
                 }
             </ScrollView>
@@ -205,16 +205,16 @@ export default class App extends Component {
 class Currency extends Component {
     constructor(props) {
         super(props);
-
-        this.state = {
-            isShowingText: 'ewgfweg'
-        };
     }
 
     render() {
         return (
             <View>
-                <Text>{this.props.crypto}</Text>
+                {
+                    Object.keys(this.props.crypto).map( (elem, i)=> (
+                        <Value key={i} value={this.props.crypto} />
+                    ))
+                }
             </View>
         );
     }
@@ -223,16 +223,20 @@ class Currency extends Component {
 class Value extends Component {
     constructor(props) {
         super(props);
-
-        this.state = {
-            isShowingText: 'ewgfweg'
-        };
     }
 
     render() {
+        /*Object.keys(this.props.value).map( (elem, i)=> {
+            console.log(this.props.value[elem]);
+        })*/
+
         return (
             <View>
-                <Text>{this.props.name}</Text>
+                {
+                    Object.keys(this.props.value).map( (elem, i)=> (
+                        <Text key={i}>{this.props.value[elem]}</Text>
+                    ))
+                }
             </View>
         );
     }
