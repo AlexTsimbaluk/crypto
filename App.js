@@ -32,21 +32,9 @@ export default class App extends Component {
     }
 
     render() {
-        /*return (
-            <View style={styles.container}>
-                <Text style={styles.welcome}>Welcome to React Native!</Text>
-                <Text style={styles.instructions}>To get started, edit App.js</Text>
-                <Text style={styles.instructions}>{instructions}</Text>
-            </View>
-        );*/
-
         return (
-            <ScrollView>
-                {
-                    Object.keys(this.state.cryptos).map( (elem, i)=> (
-                        <Currency key={i} crypto={this.state.cryptos[elem]} />
-                    ))
-                }
+            <ScrollView horizontal={true} style={styles._container}>
+                <Cryptos cryptos={this.state.cryptos} />
             </ScrollView>
         );
     }
@@ -61,7 +49,6 @@ export default class App extends Component {
             .then((response) => {
                 try {
                     let data = response.data.data;
-                    console.log(data);
 
                     for (var obj in data) {
                         let crypto = data[obj];
@@ -200,6 +187,25 @@ export default class App extends Component {
             prevCreated: true
         }));
     }
+
+}
+
+class Cryptos extends Component {
+    constructor(props) {
+        super(props);
+    }
+
+    render() {
+        return (
+            <ScrollView>
+                {
+                    Object.keys(this.props.cryptos).map( (elem, i)=> (
+                        <Currency key={i} crypto={this.props.cryptos[elem]} />
+                    ))
+                }
+            </ScrollView>
+        );
+    }
 }
 
 class Currency extends Component {
@@ -209,11 +215,13 @@ class Currency extends Component {
 
     render() {
         return (
-            <View>
+            <View style={styles._tr}>
                 {
-                    Object.keys(this.props.crypto).map( (elem, i)=> (
-                        <Value key={i} value={this.props.crypto} />
-                    ))
+                    Object.keys(this.props.crypto)
+                        .filter((elem, i) => this.props.crypto[elem] != null)
+                        .map((elem, i) => (
+                            <Value key={i} value={this.props.crypto[elem]} />
+                        ))
                 }
             </View>
         );
@@ -226,16 +234,10 @@ class Value extends Component {
     }
 
     render() {
-        /*Object.keys(this.props.value).map( (elem, i)=> {
-            console.log(this.props.value[elem]);
-        })*/
-
         return (
-            <View>
+            <View style={styles._td}>
                 {
-                    Object.keys(this.props.value).map( (elem, i)=> (
-                        <Text key={i}>{this.props.value[elem]}</Text>
-                    ))
+                    <Text>{this.props.value}</Text>
                 }
             </View>
         );
@@ -243,20 +245,33 @@ class Value extends Component {
 }
 
 const styles = StyleSheet.create({
-    container: {
-        flex: 1,
-        justifyContent: 'center',
-        alignItems: 'center',
+    _container: {
         backgroundColor: '#F5FCFF',
+        flex: 1,
+        // flexDirection: 'row',
+        // overflow: 'hidden'
     },
-    welcome: {
+    _table: {
+        // display: 'flex',
+        flex: 1,
+        flexDirection: 'row',
+        // alignItems: 'center',
+
+        overflow: 'scroll'
+    },
+    _tr: {
+        flex: 1,
+        // justifyContent: 'center',
+        flexDirection: 'row',
         fontSize: 20,
-        textAlign: 'center',
-        margin: 10,
+        // textAlign: 'center',
+        margin: 10
     },
-    instructions: {
+    _td: {
+        flex: 1,
+        paddingLeft: 5,
+        paddingRight: 5,
         textAlign: 'center',
-        color: '#333333',
-        marginBottom: 5,
-    },
+        color: '#333333'
+    }
 });
