@@ -7,14 +7,6 @@ import axios from 'axios';
 // отключаем варнинги
 console.disableYellowBox = true;
 
-
-const instructions = Platform.select({
-    ios: 'Press Cmd+R to reload,\n' + 'Cmd+D or shake for dev menu',
-    android:
-        'Double tap R on your keyboard to reload,\n' +
-        'Shake or press menu button for dev menu',
-});
-
 export default class App extends Component {
     constructor(props) {
         super(props);
@@ -211,6 +203,11 @@ class Cryptos extends Component {
 class Currency extends Component {
     constructor(props) {
         super(props);
+
+        /*Object.keys(this.props.crypto)
+            .forEach((elem) => {
+                console.log(elem);
+            });*/
     }
 
     render() {
@@ -218,9 +215,9 @@ class Currency extends Component {
             <View style={styles._tr}>
                 {
                     Object.keys(this.props.crypto)
-                        .filter((elem, i) => this.props.crypto[elem] != null)
+                        // .filter((elem, i) => this.props.crypto[elem] != null)
                         .map((elem, i) => (
-                            <Value key={i} value={this.props.crypto[elem]} />
+                            <Value key={i} dataName={elem} value={this.props.crypto[elem]} />
                         ))
                 }
             </View>
@@ -233,14 +230,80 @@ class Value extends Component {
         super(props);
     }
 
+            // <View style={styles._td}>
     render() {
         return (
-            <View style={styles._td}>
-                {
-                    <Text>{this.props.value}</Text>
-                }
+            <View style={[styles._td, this.getStyle(this.props.dataName)]}>
+                <Text style={styles._td_text}>{this.props.value}</Text>
             </View>
         );
+    }
+
+    getStyle(tdName) {
+        let style;
+
+        switch(tdName) {
+            case 'id':
+                style = styles.td_id;
+                break;
+
+            case 'name':
+                style = styles.td_name;
+                break;
+
+            case 'symbol':
+                style = styles.td_symbol;
+                break;
+
+            case 'rank':
+                style = styles.td_rank;
+                break;
+
+            case 'circulating_supply':
+                style = styles.td_circulating_supply;
+                break;
+
+            case 'total_supply':
+                style = styles.td_total_supply;
+                break;
+
+            case 'max_supply':
+                style = styles.td_max_supply;
+                break;
+
+            case 'last_updated':
+                style = styles.td_last_updated;
+                break;
+
+            case 'price':
+                style = styles.td_price;
+                break;
+
+            case 'volume_24h':
+                style = styles.td_volume_24h;
+                break;
+
+            case 'market_cap':
+                style = styles.td_market_cap;
+                break;
+
+            case 'percent_change_1h':
+                style = styles.td_percent_change_1h;
+                break;
+
+            case 'percent_change_24h':
+                style = styles.td_percent_change_24h;
+                break;
+
+            case 'percent_change_7d':
+                style = styles.td_percent_change_7d;
+                break;
+
+            default:
+                break;
+        }
+
+        return style;
     }
 }
 
@@ -260,18 +323,66 @@ const styles = StyleSheet.create({
         overflow: 'scroll'
     },
     _tr: {
+        borderBottomColor: '#000',
+        borderBottomWidth: 1,
         flex: 1,
         // justifyContent: 'center',
         flexDirection: 'row',
         fontSize: 20,
         // textAlign: 'center',
-        margin: 10
+        // margin: 10
     },
     _td: {
-        flex: 1,
-        paddingLeft: 5,
-        paddingRight: 5,
-        textAlign: 'center',
-        color: '#333333'
+        borderRightColor: '#000',
+        borderRightWidth: 1,
+        // flex: 1,
+        padding: 5,
+        textAlign: 'left'
+    },
+    _td_text: {
+        color: '#000',
+        fontSize: 12
+    },
+    td_id: {
+        width: 40,
+    },
+    td_name: {
+        width: 150
+    },
+    td_symbol: {
+        width: 50
+    },
+    td_rank: {
+        width: 40
+    },
+    td_circulating_supply: {
+        width: 110
+    },
+    td_total_supply: {
+        width: 110
+    },
+    td_max_supply: {
+        width: 110
+    },
+    td_last_updated: {
+        width: 70
+    },
+    td_price: {
+        width: 110
+    },
+    td_volume_24h: {
+        width: 150
+    },
+    td_market_cap: {
+        width: 130
+    },
+    td_percent_change_1h: {
+        width: 60
+    },
+    td_percent_change_24h: {
+        width: 60
+    },
+    td_percent_change_7d: {
+        width: 60
     }
 });
