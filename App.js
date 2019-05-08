@@ -189,13 +189,131 @@ class Cryptos extends Component {
 
     render() {
         return (
+
             <ScrollView>
+                <Header />
+
                 {
                     Object.keys(this.props.cryptos).map( (elem, i)=> (
                         <Currency key={i} crypto={this.props.cryptos[elem]} />
                     ))
                 }
             </ScrollView>
+        );
+    }
+}
+
+class Header extends Component {
+    render() {
+        return (
+            <View style={styles._tr}>
+                {/*<tr>*/}
+                    <View>
+                        <Text>
+                            ID
+                        </Text>
+                    </View>
+
+                    <View>
+                        <Text>
+                            Name
+                        </Text>
+                    </View>
+
+                    <View>
+                        <Text>
+                            Symbol
+                        </Text>
+                    </View>
+
+                    <View>
+                        <Text>
+                            Rank
+                        </Text>
+                    </View>
+
+                    <View>
+                        <Text>
+                            Supply
+                        </Text>
+                    </View>
+
+                    <View>
+                        <Text>
+                            Updated
+                        </Text>
+                    </View>
+
+                    <View>
+                        <Text>
+                            Quotes USD
+                        </Text>
+                    </View>
+
+                    <View>
+                        <Text>
+                            Percent change for
+                        </Text>
+                    </View>
+
+                {/*</tr>*/}
+
+                {/*<tr>*/}
+                    <View>
+                        <Text>
+                            Circulating
+                        </Text>
+                    </View>
+
+                    <View>
+                        <Text>
+                            Total
+                        </Text>
+                    </View>
+
+                    <View>
+                        <Text>
+                            Max
+                        </Text>
+                    </View>
+
+                    <View>
+                        <Text>
+                            Price
+                        </Text>
+                    </View>
+
+                    <View>
+                        <Text>
+                            Volume 24h
+                        </Text>
+                    </View>
+
+                    <View>
+                        <Text>
+                            Market cap
+                        </Text>
+                    </View>
+
+                    <View>
+                        <Text>
+                            1h
+                        </Text>
+                    </View>
+
+                    <View>
+                        <Text>
+                            24h
+                        </Text>
+                    </View>
+
+                    <View>
+                        <Text>
+                            7d
+                        </Text>
+                    </View>
+                {/*</tr>*/}
+            </View>
         );
     }
 }
