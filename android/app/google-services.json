@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "435244427783",
+    "firebase_url": "https://crypto-9fc14.firebaseio.com",
+    "project_id": "crypto-9fc14",
+    "storage_bucket": "crypto-9fc14.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:435244427783:android:27da6a812a4e42283c98a2",
+        "android_client_info": {
+          "package_name": "com.crypto"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "435244427783-5905v18c54tmf80n3ro26vj35atvc1g2.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDqpK50W2fSIf_Flrv0kNu8yl4p7bjcUQk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "435244427783-5905v18c54tmf80n3ro26vj35atvc1g2.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
