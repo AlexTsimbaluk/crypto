@@ -45,6 +45,8 @@
 		DDCC6438CD9D45BD813C895C /* libCodePush.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 88FEF9BC794349A3B31711F1 /* libCodePush.a */; };
 		049113C7B5314840919BAACC /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 36C5C362D4F245C28433CDAB /* libz.tbd */; };
 		85091D6EE37C4F22A6D0D044 /* libRNCamera.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F293949F03146D187F7E46B /* libRNCamera.a */; };
+		DE04150009B14D1ABF175E59 /* libRNDeviceInfo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D16E1E82A4F9469FBD98EED9 /* libRNDeviceInfo.a */; };
+		AAA4D852D95941529E6B8600 /* libRNDeviceInfo-tvOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DCC991C2D66F46C590ACE51A /* libRNDeviceInfo-tvOS.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -363,6 +365,9 @@
 		36C5C362D4F245C28433CDAB /* libz.tbd */ = {isa = PBXFileReference; name = "libz.tbd"; path = "usr/lib/libz.tbd"; sourceTree = SDKROOT; fileEncoding = undefined; lastKnownFileType = sourcecode.text-based-dylib-definition; explicitFileType = undefined; includeInIndex = 0; };
 		D756A1FB073C457FB68B7449 /* RNCamera.xcodeproj */ = {isa = PBXFileReference; name = "RNCamera.xcodeproj"; path = "../node_modules/react-native-camera/ios/RNCamera.xcodeproj"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = wrapper.pb-project; explicitFileType = undefined; includeInIndex = 0; };
 		9F293949F03146D187F7E46B /* libRNCamera.a */ = {isa = PBXFileReference; name = "libRNCamera.a"; path = "libRNCamera.a"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = archive.ar; explicitFileType = undefined; includeInIndex = 0; };
+		7B3297CC08E24733A60AC249 /* RNDeviceInfo.xcodeproj */ = {isa = PBXFileReference; name = "RNDeviceInfo.xcodeproj"; path = "../node_modules/react-native-device-info/ios/RNDeviceInfo.xcodeproj"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = wrapper.pb-project; explicitFileType = undefined; includeInIndex = 0; };
+		D16E1E82A4F9469FBD98EED9 /* libRNDeviceInfo.a */ = {isa = PBXFileReference; name = "libRNDeviceInfo.a"; path = "libRNDeviceInfo.a"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = archive.ar; explicitFileType = undefined; includeInIndex = 0; };
+		DCC991C2D66F46C590ACE51A /* libRNDeviceInfo-tvOS.a */ = {isa = PBXFileReference; name = "libRNDeviceInfo-tvOS.a"; path = "libRNDeviceInfo-tvOS.a"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = archive.ar; explicitFileType = undefined; includeInIndex = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -397,6 +402,7 @@
 				DDCC6438CD9D45BD813C895C /* libCodePush.a in Frameworks */,
 				049113C7B5314840919BAACC /* libz.tbd in Frameworks */,
 				85091D6EE37C4F22A6D0D044 /* libRNCamera.a in Frameworks */,
+				DE04150009B14D1ABF175E59 /* libRNDeviceInfo.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -413,6 +419,7 @@
 				2D02E4C61E0B4AEC006451C7 /* libRCTSettings-tvOS.a in Frameworks */,
 				2D02E4C71E0B4AEC006451C7 /* libRCTText-tvOS.a in Frameworks */,
 				2D02E4C81E0B4AEC006451C7 /* libRCTWebSocket-tvOS.a in Frameworks */,
+				AAA4D852D95941529E6B8600 /* libRNDeviceInfo-tvOS.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -592,6 +599,7 @@
 				0AB6AEB609E444EE86A3FC40 /* AppCenterReactNativeCrashes.xcodeproj */,
 				5D1D6B1A4E524F9081FCB41A /* CodePush.xcodeproj */,
 				D756A1FB073C457FB68B7449 /* RNCamera.xcodeproj */,
+				7B3297CC08E24733A60AC249 /* RNDeviceInfo.xcodeproj */,
 			);
 			name = Libraries;
 			sourceTree = "<group>";
@@ -1224,6 +1232,8 @@
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 				);
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1232,6 +1242,7 @@
 					"$(SRCROOT)\..\node_modules\appcenter-crashes\ios\AppCenterReactNativeCrashes",
 					"$(SRCROOT)\..\node_modules\react-native-code-push\ios\CodePush/**",
 					"$(SRCROOT)\..\node_modules\react-native-camera\ios/**",
+					"$(SRCROOT)\..\node_modules\react-native-device-info\ios\RNDeviceInfo/**",
 				);
 			};
 			name = Debug;
@@ -1258,6 +1269,8 @@
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 				);
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1266,6 +1279,7 @@
 					"$(SRCROOT)\..\node_modules\appcenter-crashes\ios\AppCenterReactNativeCrashes",
 					"$(SRCROOT)\..\node_modules\react-native-code-push\ios\CodePush/**",
 					"$(SRCROOT)\..\node_modules\react-native-camera\ios/**",
+					"$(SRCROOT)\..\node_modules\react-native-device-info\ios\RNDeviceInfo/**",
 				);
 			};
 			name = Release;
@@ -1293,6 +1307,7 @@
 					"$(SRCROOT)\..\node_modules\appcenter-crashes\ios\AppCenterReactNativeCrashes",
 					"$(SRCROOT)\..\node_modules\react-native-code-push\ios\CodePush/**",
 					"$(SRCROOT)\..\node_modules\react-native-camera\ios/**",
+					"$(SRCROOT)\..\node_modules\react-native-device-info\ios\RNDeviceInfo/**",
 				);
 			};
 			name = Debug;
@@ -1319,6 +1334,7 @@
 					"$(SRCROOT)\..\node_modules\appcenter-crashes\ios\AppCenterReactNativeCrashes",
 					"$(SRCROOT)\..\node_modules\react-native-code-push\ios\CodePush/**",
 					"$(SRCROOT)\..\node_modules\react-native-camera\ios/**",
+					"$(SRCROOT)\..\node_modules\react-native-device-info\ios\RNDeviceInfo/**",
 				);
 			};
 			name = Release;
@@ -1353,6 +1369,8 @@
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 				);
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1361,6 +1379,7 @@
 					"$(SRCROOT)\..\node_modules\appcenter-crashes\ios\AppCenterReactNativeCrashes",
 					"$(SRCROOT)\..\node_modules\react-native-code-push\ios\CodePush/**",
 					"$(SRCROOT)\..\node_modules\react-native-camera\ios/**",
+					"$(SRCROOT)\..\node_modules\react-native-device-info\ios\RNDeviceInfo/**",
 				);
 			};
 			name = Debug;
@@ -1395,6 +1414,8 @@
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 				);
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1403,6 +1424,7 @@
 					"$(SRCROOT)\..\node_modules\appcenter-crashes\ios\AppCenterReactNativeCrashes",
 					"$(SRCROOT)\..\node_modules\react-native-code-push\ios\CodePush/**",
 					"$(SRCROOT)\..\node_modules\react-native-camera\ios/**",
+					"$(SRCROOT)\..\node_modules\react-native-device-info\ios\RNDeviceInfo/**",
 				);
 			};
 			name = Release;
@@ -1436,6 +1458,8 @@
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 				);
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1444,6 +1468,7 @@
 					"$(SRCROOT)\..\node_modules\appcenter-crashes\ios\AppCenterReactNativeCrashes",
 					"$(SRCROOT)\..\node_modules\react-native-code-push\ios\CodePush/**",
 					"$(SRCROOT)\..\node_modules\react-native-camera\ios/**",
+					"$(SRCROOT)\..\node_modules\react-native-device-info\ios\RNDeviceInfo/**",
 				);
 			};
 			name = Debug;
@@ -1477,6 +1502,8 @@
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 				);
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1485,6 +1512,7 @@
 					"$(SRCROOT)\..\node_modules\appcenter-crashes\ios\AppCenterReactNativeCrashes",
 					"$(SRCROOT)\..\node_modules\react-native-code-push\ios\CodePush/**",
 					"$(SRCROOT)\..\node_modules\react-native-camera\ios/**",
+					"$(SRCROOT)\..\node_modules\react-native-device-info\ios\RNDeviceInfo/**",
 				);
 			};
 			name = Release;
