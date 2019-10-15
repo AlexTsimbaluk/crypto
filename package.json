@@ -15,7 +15,9 @@
     "react-native": "0.59.5",
     "react-native-camera": "^3.7.2",
     "react-native-code-push": "^5.7.0",
-    "react-native-device-info": "^4.0.1"
+    "react-native-device-info": "^4.0.1",
+    "react-native-qrcode": "^0.2.7",
+    "react-native-qrcode-scanner": "^1.2.3"
   },
   "devDependencies": {
     "@babel/core": "^7.6.4",
