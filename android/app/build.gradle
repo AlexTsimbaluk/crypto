@@ -108,6 +108,7 @@ android {
         targetSdkVersion rootProject.ext.targetSdkVersion
         versionCode 1
         versionName "1.0"
+        missingDimensionStrategy 'react-native-camera', 'general'
     }
     splits {
         abi {
@@ -139,6 +140,7 @@ android {
 }
 
 dependencies {
+    implementation project(':react-native-camera')
     implementation project(':react-native-code-push')
     implementation project(':appcenter-crashes')
     implementation project(':appcenter-analytics')
