@@ -11,6 +11,9 @@
   },
   "dependencies": {
     "@react-native-community/cli": "^2.9.0",
+    "appcenter": "2.4.0",
+    "appcenter-analytics": "2.4.0",
+    "appcenter-crashes": "2.4.0",
     "axios": "^0.18.1",
     "jetifier": "^1.6.4",
     "react": "16.9.0",
