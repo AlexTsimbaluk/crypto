@@ -53,7 +53,5 @@
         </dict>
       </dict>
     </dict>
-    <key>CodePushDeploymentKey</key>
-    <string>deployment-key-here</string>
   </dict>
 </plist>
