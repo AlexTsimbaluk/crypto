@@ -17,7 +17,7 @@
     "axios": "^0.18.1",
     "jetifier": "^1.6.4",
     "react": "16.9.0",
-    "react-native": "0.61.0",
+    "react-native": "0.62.3",
     "react-native-camera": "^3.7.2",
     "react-native-code-push": "^5.7.0",
     "react-native-device-info": "^4.0.1",
